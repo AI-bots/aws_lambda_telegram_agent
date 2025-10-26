@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AWS_REGION: eu-west-1                   # set this to your preferred AWS region, e.g. us-west-1
+  AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: telegram_bot_agent           # set this to your Amazon ECR repository name
 
 jobs:
