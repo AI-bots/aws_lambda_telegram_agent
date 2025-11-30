@@ -30,6 +30,7 @@ dependencies = [
   "langgraph-checkpoint-mongodb>=0.2.1",
   "pymongo[srv]>=4.15.3",
   "certifi>=2025.10.5",
+  "slack-sdk>=3.33.0",
 ]
 requires-python = ">= 3.10"
 
