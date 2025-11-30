@@ -13,11 +13,12 @@ from telegram_agent_aws.application.conversation_service.workflow.nodes import (
 from telegram_agent_aws.application.conversation_service.workflow.state import TelegramAgentState
 from telegram_agent_aws.application.conversation_service.workflow.tools import get_retriever_tool
 
-retriever_tool = get_retriever_tool()
-
 
 @lru_cache(maxsize=1)
 def create_workflow_graph():
+    # Initialize retriever tool inside the function to avoid cold start issues
+    retriever_tool = get_retriever_tool()
+    
     graph_builder = StateGraph(TelegramAgentState)
 
     graph_builder.add_node("router_node", router_node)
